@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <main>
+    <div>
+      {{#if productos.length }}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Edad</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each productos}}
+              <tr>
+                <th scope="row">
+                </th>
+                <td>
+                  {{this.nombre}}
+                </td>
+                <td>
+                  {{this.apellido}}
+                </td>
+                <td>
+                  {{this.edad}}
+                </td>
+              </tr>
+              {{/productos}}
+          </tbody>
+        </table>
+        {{else}}
+          No se encontraron datos
+        {{/if}}
+    </div>
+
+  </main>
+</body>
+
+</html>

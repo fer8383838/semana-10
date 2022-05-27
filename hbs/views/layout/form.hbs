@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+  <title>Documento con Handlebars</title>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <div class="jumbotron">
+        <h2>Ingrese sus datos</h2>
+        <form method="POST" action="/productos">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" name="apellido">
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="text" class="form-control" name="edad">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+  </div>
+</body>
+
+</html>

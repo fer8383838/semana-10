@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <%- include('./partials/header', { current: 'productos' }) %>
+        </header>
+    </div>
+
+    <main>
+        <div>
+            <% if (productos.length) { %>
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Edad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% productos.forEach((e, index) => { %>
+                    <tr>
+                      <th scope="row"><%= index+1 %></th>
+                      <td><%= e.nombre %></td>
+                      <td><%= e.apellido %></td>
+                      <td><%= e.edad %></td>
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+            <% } else { %>
+              No se encontraron datos
+            <% } %>
+        </div>
+
+    </main>
+</body>
+</html>
